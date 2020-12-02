@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF7F75C9-DBD1-4E85-8A35-9574D952209B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>text.doors</RootNamespace>
+    <AssemblyName>门窗现场三性检测</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>acroread2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls, Version=2.0.0.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.0.0.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.0.0.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.12.0.0\lib\net11\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="nmodbuspc">
+      <HintPath>..\dll\nmodbuspc.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="RegDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\RegDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Doc, Version=6.5.2.4040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Doc.6.5.2\lib\net40\Spire.Doc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.6.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Doc.6.5.2\lib\net40\Spire.License.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=4.5.0.2040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Doc.6.5.2\lib\net40\Spire.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.60.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\System.Data.SQLite.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TeeChart">
+      <HintPath>..\dll\TeeChart.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Detection\AirtightDetection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detection\AirtightDetection.Designer.cs">
+      <DependentUpon>AirtightDetection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detection\WatertightDetection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detection\WatertightDetection.Designer.cs">
+      <DependentUpon>WatertightDetection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\LAN.cs" />
+    <Compile Include="Common\TCPClient.cs" />
+    <Compile Include="Common\Formula.cs" />
+    <Compile Include="Default\DefaultBase.cs" />
+    <Compile Include="Detection\TakePhotos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detection\TakePhotos.Designer.cs">
+      <DependentUpon>TakePhotos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detection\PIDManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detection\PIDManager.Designer.cs">
+      <DependentUpon>PIDManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detection\SystemManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detection\SystemManager.Designer.cs">
+      <DependentUpon>SystemManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detection\WindPressureDetection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detection\WindPressureDetection.Designer.cs">
+      <DependentUpon>WindPressureDetection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Calibrating_Dict.cs" />
+    <Compile Include="Model\DataBase\Model_dt_kfy_Info.cs" />
+    <Compile Include="Model\Pressure.cs" />
+    <Compile Include="Default\BFMCommand.cs" />
+    <Compile Include="Default\PublicEnum.cs" />
+    <Compile Include="Model\WindPressureDGV.cs" />
+    <Compile Include="Service\DAL_Demarcate_Dict.cs" />
+    <Compile Include="Service\DAL_dt_BaseSet.cs" />
+    <Compile Include="Service\DAL_dt_Info.cs" />
+    <Compile Include="Service\DAL_dt_kfy_Info.cs" />
+    <Compile Include="Service\DAL_dt_qm_Info.cs" />
+    <Compile Include="Service\DAL_dt_Settings.cs" />
+    <Compile Include="Detection\ComplexAssessment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detection\ComplexAssessment.Designer.cs">
+      <DependentUpon>ComplexAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detection\DetectionSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detection\DetectionSet.Designer.cs">
+      <DependentUpon>DetectionSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detection\ExportReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detection\ExportReport.Designer.cs">
+      <DependentUpon>ExportReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detection\RealTimeSurveillance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detection\RealTimeSurveillance.Designer.cs">
+      <DependentUpon>RealTimeSurveillance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detection\Select_Code.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detection\Select_Code.Designer.cs">
+      <DependentUpon>Select_Code.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detection\SensorSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detection\SensorSet.Designer.cs">
+      <DependentUpon>SensorSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\DAL_dt_sm_Info.cs" />
+    <Compile Include="User\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DataBase\Model_dt_Info.cs" />
+    <Compile Include="Model\LevelIndex.cs" />
+    <Compile Include="Model\DataBase\Model_dt_qm_Info.cs" />
+    <Compile Include="Model\DataBase\Model_dt_Settings.cs" />
+    <Compile Include="Model\DataBase\Model_dt_sm_Info.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\UpdatePassWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UpdatePassWord.Designer.cs">
+      <DependentUpon>UpdatePassWord.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Detection\AirtightDetection.resx">
+      <DependentUpon>AirtightDetection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detection\WatertightDetection.resx">
+      <DependentUpon>WatertightDetection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detection\ComplexAssessment.resx">
+      <DependentUpon>ComplexAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detection\DetectionSet.resx">
+      <DependentUpon>DetectionSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detection\ExportReport.resx">
+      <DependentUpon>ExportReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detection\TakePhotos.resx">
+      <DependentUpon>TakePhotos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detection\PIDManager.resx">
+      <DependentUpon>PIDManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detection\RealTimeSurveillance.resx">
+      <DependentUpon>RealTimeSurveillance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detection\Select_Code.resx">
+      <DependentUpon>Select_Code.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detection\SensorSet.resx">
+      <DependentUpon>SensorSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detection\SystemManager.resx">
+      <DependentUpon>SystemManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detection\WindPressureDetection.resx">
+      <DependentUpon>WindPressureDetection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="User\UpdatePassWord.resx">
+      <DependentUpon>UpdatePassWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Young.Core\Young.Core.csproj">
+      <Project>{fe892b79-a142-4c66-9c28-93f2435691da}</Project>
+      <Name>Young.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="acroread.ico" />
+    <Content Include="acroread2.ico" />
+    <Content Include="readme\readme.txt" />
+    <Content Include="Sql\dt_kfy_Info_sql.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "text.doors", "text.doors\text.doors.csproj", "{FF7F75C9-DBD1-4E85-8A35-9574D952209B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Young.Core", "Young.Core\Young.Core.csproj", "{FE892B79-A142-4C66-9C28-93F2435691DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF7F75C9-DBD1-4E85-8A35-9574D952209B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF7F75C9-DBD1-4E85-8A35-9574D952209B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF7F75C9-DBD1-4E85-8A35-9574D952209B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF7F75C9-DBD1-4E85-8A35-9574D952209B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE892B79-A142-4C66-9C28-93F2435691DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE892B79-A142-4C66-9C28-93F2435691DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE892B79-A142-4C66-9C28-93F2435691DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE892B79-A142-4C66-9C28-93F2435691DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {397743DE-4BE1-4D3D-9DDA-019B0A9003BB}
+	EndGlobalSection
+EndGlobal
