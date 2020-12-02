@@ -1,0 +1,13 @@
+F:\jky\jky.project\text.lab\bin\Debug\text.lab.exe.config
+F:\jky\jky.project\text.lab\bin\Debug\text.lab.exe
+F:\jky\jky.project\text.lab\bin\Debug\text.lab.pdb
+F:\jky\jky.project\text.lab\obj\Debug\text.lab.Properties.Resources.resources
+F:\jky\jky.project\text.lab\obj\Debug\text.lab.csproj.GenerateResource.Cache
+F:\jky\jky.project\text.lab\obj\Debug\text.lab.exe
+F:\jky\jky.project\text.lab\obj\Debug\text.lab.pdb
+F:\jky\jky.project\text.lab\obj\Debug\text.lab.csprojResolveAssemblyReference.cache
+E:\08-GitHub\jky-doors-3x\text.lab\obj\Debug\text.lab.csprojAssemblyReference.cache
+E:\08-GitHub\jky-doors-3x\text.lab\obj\Debug\text.lab.Properties.Resources.resources
+E:\08-GitHub\jky-doors-3x\text.lab\obj\Debug\text.lab.csproj.GenerateResource.cache
+E:\08-GitHub\jky-doors-3x\text.lab\obj\Debug\text.lab.csproj.CoreCompileInputs.cache
+E:\08-GitHub\jky-doors-3x\text.lab\obj\Debug\text.lab.pdb
