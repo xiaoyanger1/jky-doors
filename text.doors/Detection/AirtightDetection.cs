@@ -78,7 +78,7 @@ namespace text.doors.Detection
             BindFlowBase();
             BindSetPressure();
             QMchartInit();
-            
+
             Clear();
         }
 
@@ -308,10 +308,10 @@ namespace text.doors.Detection
                 var value = int.Parse(_tcpClient.GetCYXS(ref IsSeccess).ToString());
                 if (!IsSeccess)
                 {
-                    MessageBox.Show("获取大气压力异常！", "警告！", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification);
+                   // MessageBox.Show("获取大气压力异常！", "警告！", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification);
                     return;
                 }
-                lbl_dqyl.Text = value.ToString();
+                //  lbl_dqyl.Text = value.ToString();
 
                 //读取设定值
                 if (airtightPropertyTest == PublicEnum.AirtightPropertyTest.ZStart)
@@ -319,7 +319,7 @@ namespace text.doors.Detection
                     double yl = _tcpClient.GetZYYBYLZ(ref IsSeccess, "ZYKS");
                     if (!IsSeccess)
                     {
-                        MessageBox.Show("获取正压预备异常！", "警告！", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification);
+                    //    MessageBox.Show("获取正压预备异常！", "警告！", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification);
                         return;
                     }
                     lbl_setYL.Text = yl.ToString();
@@ -329,7 +329,7 @@ namespace text.doors.Detection
                     double yl = _tcpClient.GetZYYBYLZ(ref IsSeccess, "FYKS");
                     if (!IsSeccess)
                     {
-                        MessageBox.Show("获取负压开始异常！", "警告！", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification);
+                     //   MessageBox.Show("获取负压开始异常！", "警告！", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification);
                         return;
                     }
                     lbl_setYL.Text = "-" + yl.ToString();
@@ -970,7 +970,7 @@ namespace text.doors.Detection
                 Logger.Error(ex);
             }
         }
-        
+
         private void Clear()
         {
             pressure = new Pressure();
@@ -979,12 +979,26 @@ namespace text.doors.Detection
         }
 
 
-        
+
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             BindFlowBase();
         }
-        
+
+        private void tim_cy_Tick(object sender, EventArgs e)
+        {
+            if (_tcpClient.IsTCPLink)
+            {
+                var value = int.Parse(_tcpClient.GetCYXS(ref IsSeccess).ToString());
+                if (!IsSeccess)
+                {
+                    // MessageBox.Show("获取大气压力异常！", "警告！", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification);
+                    return;
+                }
+                lbl_dqyl.Text = value.ToString();
+            }
+        }
+
         private void tChart_sm_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
@@ -993,7 +1007,7 @@ namespace text.doors.Detection
             }
         }
 
-        
+
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.tChart_qm.Export.ShowExportDialog();

@@ -1,0 +1,36 @@
+------------------------------------------------------------
+2021-06-27 09:15:52,581 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:15:53,612 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:15:54,644 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:15:55,671 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:15:56,688 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:15:57,720 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:15:58,751 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:15:59,780 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:00,801 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:01,819 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:02,852 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:05,195 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:06,220 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:06,496 [1] - System.TypeInitializationException: “Young.Core.Common.WordUtility”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“office, Version=11.0.0.0, Culture=neutral, PublicKeyToken=6298d2d1fcfb5d85”或它的某一个依赖项。系统找不到指定的文件。
+   在 Young.Core.Common.WordUtility..cctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Young.Core.Common.WordUtility..ctor(String tempFile, String saveFile)
+   在 text.doors.Detection.ExportReport.Eexport(String fileName) 位置 E:\08-GitHub\jky-doors-3x\text.doors\Detection\ExportReport.cs:行号 94
+2021-06-27 09:16:07,241 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:08,264 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:09,292 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:10,319 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:11,349 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:14,062 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:15,082 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:16,563 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:20,314 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:25,425 [1] - System.TypeInitializationException: “Young.Core.Common.WordUtility”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“office, Version=11.0.0.0, Culture=neutral, PublicKeyToken=6298d2d1fcfb5d85”或它的某一个依赖项。系统找不到指定的文件。
+   在 Young.Core.Common.WordUtility..cctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Young.Core.Common.WordUtility..ctor(String tempFile, String saveFile)
+   在 text.doors.Detection.ExportReport.Eexport(String fileName) 位置 E:\08-GitHub\jky-doors-3x\text.doors\Detection\ExportReport.cs:行号 94
+2021-06-27 09:16:25,931 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:26,962 [5] - 连接服务器失败!:IP192.168.2.5,port:502
+2021-06-27 09:16:27,992 [5] - 连接服务器失败!:IP192.168.2.5,port:502

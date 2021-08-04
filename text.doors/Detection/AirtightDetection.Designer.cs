@@ -64,6 +64,7 @@
             this.tim_Top10 = new System.Windows.Forms.Timer(this.components);
             this.gv_list = new System.Windows.Forms.Timer(this.components);
             this.tim_PainPic = new System.Windows.Forms.Timer(this.components);
+            this.tim_cy = new System.Windows.Forms.Timer(this.components);
             this.tc_RealTimeSurveillance.SuspendLayout();
             this.page_airtight.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -477,6 +478,12 @@
             this.tim_PainPic.Interval = 800;
             this.tim_PainPic.Tick += new System.EventHandler(this.tim_PainPic_Tick);
             // 
+            // tim_cy
+            // 
+            this.tim_cy.Enabled = true;
+            this.tim_cy.Interval = 500;
+            this.tim_cy.Tick += new System.EventHandler(this.tim_cy_Tick);
+            // 
             // AirtightDetection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -542,5 +549,6 @@
         private System.Windows.Forms.Timer tim_PainPic;
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Timer tim_cy;
     }
 }
